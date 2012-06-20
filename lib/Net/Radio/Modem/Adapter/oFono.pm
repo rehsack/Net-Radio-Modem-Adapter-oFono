@@ -71,8 +71,7 @@ Returns list of modems by object path known by oFono.
 sub get_modems
 {
     my $self = $_[0];
-    $self->{ofono}->get_modems( !( !$self->{dbus_main_runs} ) );   # avoid vim understands !! as m!!
-    return;
+    return $self->{ofono}->get_modems( !( !$self->{dbus_main_runs} ) );   # avoid vim understands !! as m!!
 }
 
 my %oFonoAliases = (
